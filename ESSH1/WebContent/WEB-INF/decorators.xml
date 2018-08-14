@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+ <!-- <mapping path="/*" decorator="/WEB-INF/views/decorators/decorator.html" />
+ 
+ <mapping path="/exclude.jsp*" exclue="true" /> -->
+<!-- defaultdir set the resource folder of the decorator files -->
+<decorators defaultdir="/WEB-INF/decorators">
+    <!-- Any urls that are excluded will never be decorated by Sitemesh -->
+    <excludes>
+        <pattern>/exclude/*</pattern>
+        <pattern>/ajax/*</pattern>
+        <pattern>**ajax=true</pattern>
+        <pattern>/login/login.html*</pattern>
+        <!-- <pattern>/404.jsp</pattern>  -->
+    </excludes>
+
+    <decorator name="osp-theme" page="index.jsp">
+        <pattern>/*</pattern>
+    </decorator>
+
+</decorators>

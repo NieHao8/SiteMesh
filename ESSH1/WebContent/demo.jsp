@@ -1,15 +1,34 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+    <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE HTML>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>312</title>
-<content tag="pageTitle">All VM List</content>
+<title></title>
+<content tag="pageTitle">All USER List</content>
 </head>
 <body>
-<h1>HELLO ECLIPSE SSMbbb</h1>
-hfuagf
+
+<table>
+		<caption>user list</caption>
+		<tr>
+		<th>user name</th>
+			<th>user age</th>
+			<th>user sex</th>
+			<th>user permission</th>
+		</tr>
+		<c:forEach items="${clist}" var="cus">
+			<tr>
+				<td>${cus.name }</td>
+				<td>${cus.age }</td>
+				<td>${cus.sex }</td>
+				<td>${cus.role }</td>
+			</tr>
+		</c:forEach>
+
+
+	</table>
 
 </body>
 </html>
